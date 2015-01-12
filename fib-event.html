@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Events</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js2starter.js"></script>
+  <script>
+    var computeFibList = function(list) {
+      // YOUR CODE HERE
+    };
+
+    /////////////////////////////////
+    // DO NOT TOUCH THE CODE BELOW!
+    /////////////////////////////////
+
+    var getRandomArray = function() {
+      var x = [];
+      for (var i = 0; i < 10; i++) {
+        x.push_back(1 + Math.floor(Math.random() * 10));
+      }
+      return x;
+    };
+
+    var fib = function(n) {
+      if (n === 1 || n === 2) {
+        return 1;
+      }
+      return fib(n - 1) + fib(n - 2);
+    };
+
+    $(document).ready(function() {
+      var x = getRandomArray();
+      $('#num-list').text(x.toString());
+      setTimeout(function() {
+        computeFibList(x);
+      }, 0);
+    });
+  </script>
+
+</head>
+<body>
+  <!-- You should not have to change this HTML -->
+  <div>Computing fib for: <span id="num-list"></span></div>
+  <div id="fib-list"></div>
+</body>
+</html>
