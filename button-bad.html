@@ -1,0 +1,21 @@
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      for (var i = 0; i <= 3; i++) {
+        var b = $('<button />').text(i).click(function(e) {
+          console.log(i);
+          $('#answer').text('Pressed ' + i);
+        });
+        $('#button-container').append(b);
+      }
+    });
+    // What's wrong here?
+    // The click callback does not "remember" what the value of i was
+    // The value of i is evaluated at the _callback_ runtime!
+  </script>
+</head>
+<body>
+  <div id="log">What did you press? <span id="answer"></span></div>
+  <div id="button-container"></div>
+</body>

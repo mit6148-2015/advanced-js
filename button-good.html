@@ -1,0 +1,23 @@
+<head>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      for (var i = 0; i <= 3; i++) {
+        (function(n) {
+          var showNum = function(n) {
+            $('#answer').text('Pressed ' + n);
+          };
+          var b = $('<button />').text(n).click(function(e) {
+            console.log(n);
+            $('#answer').text('Pressed ' + n);
+          });
+          $('#button-container').append(b);
+        })(i);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="log">What did you press? <span id="answer"></span></div>
+  <div id="button-container"></div>
+</body>
