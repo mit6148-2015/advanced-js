@@ -17,6 +17,7 @@ var objB = {};
 // what is objB.field1?
 
 objB = Object.create(objA);
+// what is objB.field1?
 
 // what is objB.__proto__?
 // We establish a prototype chain:

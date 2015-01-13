@@ -9,6 +9,7 @@ var f = function(x) {
   return x + y + z;
 };
 
+
 /*
   II. First-class functions
   Recall that functions are just like another variable. So we can return them!

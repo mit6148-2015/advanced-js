@@ -180,6 +180,8 @@ console.log("done");
   In light of the event loop, let's look at our examples again.
 
   (see recording for explanations w/ event loop)
+
+  Fib example: show soln and wrong behavior.
 */
 
 

@@ -3,10 +3,18 @@
 <head>
   <title>Fibonacci Events</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js2starter.js"></script>
   <script>
     var computeFibList = function(list) {
-      // YOUR CODE HERE
+      var i = list.shift();
+      $('#fib-list').append('<span>begin to compute fib(' + i + ') ... </span>');
+      setTimeout(function(){
+        $('#fib-list').append('<span>' + fib(i) + '</span><br />');
+        if (list.length > 0) {
+          setTimeout(function() {
+            computeFibList(list);
+          }, 5000);
+        }
+      }, 0);
     };
 
     /////////////////////////////////
